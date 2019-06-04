@@ -1,0 +1,16 @@
+{
+  "name": "admin-system",
+  "version": "1.0.0",
+  "description": "A backend admin system, support authority control.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "admin",
+    "backend",
+    "authority"
+  ],
+  "author": "hufei",
+  "license": "ISC"
+}
