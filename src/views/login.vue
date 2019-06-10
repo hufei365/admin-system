@@ -1,5 +1,5 @@
 <template>
-  <div class="login-wrap">
+  <div class="limiter">
     <div class="container-login">
       <div class="wrap-login">
         <div class="login-form-title">
@@ -40,101 +40,98 @@
 </template>
 
 <style lang="scss" scoped>
-.login-wrap {
-  background: hsla(0, 0%, 100%, 0.5);
-  margin: auto;
-  border: 1px solid hsla(0, 0%, 0%, 0.2);
-  background-clip: padding-box;
-  border-radius: 0.5em;
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
+.wrap-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #b2b2b2;
+  margin-bottom: 26px;
+}
 
-  .wrap-input {
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid #b2b2b2;
-    margin-bottom: 26px;
-  }
+.container-login {
+  border-radius: 10px;
+}
 
-  .container-login {
-    border-radius: 10px;
-  }
+.login-form-title {
+  background: url(images/bg-01.jpg) no-repeat center/cover;
+  padding: 70px 15px 74px 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 
-  .login-form-title {
-    background: url(images/bg-01.jpg) no-repeat center/cover;
-    padding: 70px 15px 74px 15px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: rgba(54, 84, 99, 0.7);
-    }
-    font-size: 30px;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  
-
-  .label-input {
-    font-size: 15px;
-    color: #808080;
-    line-height: 1.2;
-    text-align: right;
-    position: absolute;
-    top: 14px;
-    left: -105px;
-    width: 80px;
-  }
-
-  .input {
-    font-family: Poppins-Regular;
-    font-size: 15px;
-    color: #555555;
-    line-height: 1.2;
-    display: block;
-    width: 100%;
-    background: transparent;
-    padding: 0 5px;
-    outline: none;
-    border: none;
-    height: 45px;
-  }
-  .focus-input::before {
+  &::before {
     content: "";
     display: block;
     position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    -webkit-transition: all 0.6s;
-    -o-transition: all 0.6s;
-    -moz-transition: all 0.6s;
-    transition: all 0.6s;
-    background: #57b846;
-  }
-  .input:focus + .focus-input::before {
+    z-index: -1;
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(54, 84, 99, 0.7);
   }
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
 
-  .txt1 {
-    font-size: 13px;
-    line-height: 1.4;
-    color: #999999;
-  }
-  .container-login-form-btn {
+.label-input {
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.2;
+  text-align: right;
+  position: absolute;
+  top: 14px;
+  left: -105px;
+  width: 80px;
+}
+
+.input {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 0 5px;
+  outline: none;
+  border: none;
+  height: 45px;
+}
+.focus-input::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  transition: all 0.6s;
+  background: #57b846;
+}
+.input:focus + .focus-input::before {
+  width: 100%;
+}
+
+.txt1 {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #999999;
+}
+
+.container-login-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -173,38 +170,39 @@
   background-color: #333333;
 }
 
-.flex-box{
+.flex-box {
   margin-bottom: 30px;
+  width: 100%;
 }
-}
-.container-login{
-    width: 100%;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background: #ebeeef;
+.container-login {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #ebeeef;
+  box-sizing: border-box;
 }
 .wrap-login {
-    width: 675px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    color: #808080;
-  }
-form{
-        display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 43px 88px 93px 190px;
-  }
+  width: 675px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #808080;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 43px 88px 93px 190px;
+}
 @media (max-width: 576px) {
   form {
     padding: 43px 15px 57px 117px;
