@@ -11,7 +11,7 @@ fis.match('/**\.{css,scss}', {
     useSprite: true
 });
 
-fis.match('/src/{require.js, resource-map.js}', {
+fis.match('{/src/resource-map.js,/src/components/libs/require.js}', {
     isMod: false,
     parser: null
 });
@@ -62,7 +62,7 @@ fis.match('/src/(**.{html, js, png, scss, css, jpg, vue})', {
     // })
 });
 fis.match('/src/(**).vue', {
-    release :'$1_vue.js',
+    release :'$1.vue.js',
     // deploy: fis.plugin('local-deliver', {
     //     to: path.resolve(__dirname, './output')
     // })

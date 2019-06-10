@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,25 @@
 
     <script src="/components/libs/require.js"></script>
     <script src="/resource-map.js"></script>
+    <link rel="import" href="common.html?__inline">
 </head>
+
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <Login></Login>
+    </div>
     <script type="module">
         import Vue from 'vue/dist/vue.common.prod.js';
-        require.async(['login.vue'], (Login)=>{
+        import Login from './login.vue';
+        require.async([], () => {
             new Vue({
                 el: '#app',
-                render: h=>{h(Login);}
+                components: {
+                    Login
+                }
             })
         });
     </script>
 </body>
+
 </html>

@@ -12,5 +12,14 @@
     "authority"
   ],
   "author": "hufei",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime-corejs3": "^7.4.5",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5"
+  }
 }
