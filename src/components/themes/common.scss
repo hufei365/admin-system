@@ -1,4 +1,70 @@
+html {
+    height: 100%;
+}
+
 body {
-    font: 14px/26px  "Microsoft YaHei", "\u5b8b\u4f53",arial, helvetica, sans-serif, tahoma;
+    font: 14px/26px "Microsoft YaHei", "\u5b8b\u4f53", arial, helvetica, sans-serif, tahoma;
     color: #383d48;
-} 
+    height: 100%;
+    background: #ebeeef;
+
+
+    .input-checkbox {
+        display: none;
+    }
+
+    .label-checkbox {
+        font-family: Poppins-Regular;
+        font-size: 13px;
+        color: #999999;
+        line-height: 1.4;
+
+        display: block;
+        position: relative;
+        padding-left: 26px;
+        cursor: pointer;
+    }
+
+    .label-checkbox::before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 13px;
+        color: transparent;
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 2px;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .input-checkbox:checked+.label-checkbox::before {
+        color: #57b846;
+    }
+
+    .flex-box{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        -ms-align-items: center;
+        align-items: center;
+    }
+}
