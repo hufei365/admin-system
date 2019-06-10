@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登录</title>
-
-    <script src="/components/libs/require.js"></script>
-    <script src="/resource-map.js"></script>
-    <link rel="import" href="common.html?__inline">
+    <link rel="import" href="../layout/common.html?__inline">
 </head>
 
 <body>
@@ -19,14 +16,12 @@
     <script type="module">
         import Vue from 'vue/dist/vue.common.prod.js';
         import Login from './login.vue';
-        require.async([], () => {
             new Vue({
                 el: '#app',
                 components: {
                     Login
                 }
-            })
-        });
+            });
     </script>
 </body>
 

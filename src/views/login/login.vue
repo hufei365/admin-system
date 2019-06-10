@@ -31,13 +31,28 @@
           </div>
 
           <div class="container-login-form-btn">
-            <button class="login-form-btn">登录</button>
+            <button class="login-form-btn" @click=doLogin>登录</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </template>
+
+
+
+
+<script>
+export default {
+  methods: {
+    doLogin(){
+      console.log('success!!!');
+    }
+  }
+};
+</script>
+
+
 
 <style lang="scss" scoped>
 .limiter {
@@ -222,11 +237,6 @@ form {
   }
 }
 </style>
-
-
-<script>
-export default {};
-</script>
 
 
 
