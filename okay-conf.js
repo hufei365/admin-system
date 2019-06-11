@@ -3,7 +3,7 @@ fis.set('namespace', "admin");
 fis.set('map_file', '/src/resource-map.js');
 
 
-fis.hook(require('../fis3-hook-npm'));
+fis.hook(require('fis3-hook-npm'));
 
 
 fis.match('/**\.{css,scss}', {

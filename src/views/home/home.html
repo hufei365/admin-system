@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,24 @@
     <title>Admin System</title>
     <link rel="import" href="../layout/common.html?__inline">
 </head>
+
 <body>
-    <div id="app"></div>
+    <style>
+    .nav-item{
+        font-size: 24px;
+        color: blueviolet;
+    }</style>
+    <div id="app">
+        <p>
+            <router-link class="nav-item" to="/dashboard">dashboard</router-link>
+            <router-link class="nav-item" to="/form">form</router-link>
+        </p>
+        <router-view></router-view>
+    </div>
 
     <script>
-        require.async('home.js');
+        require.async('./home.js', () => {});
     </script>
 </body>
+
 </html>
