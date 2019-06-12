@@ -7,20 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin System</title>
     <link rel="import" href="../layout/common.html?__inline">
+    <link rel="stylesheet" href="./home.scss">
 </head>
 
 <body>
-    <style>
-    .nav-item{
-        font-size: 24px;
-        color: blueviolet;
-    }</style>
-    <div id="app">
-        <p>
-            <router-link class="nav-item" to="/dashboard">dashboard</router-link>
-            <router-link class="nav-item" to="/form">form</router-link>
-        </p>
-        <router-view></router-view>
+    <div id="app" :class="[mode]">
+        <aside>
+            <left-nav :is-collapse=isCollapse></left-nav>
+        </aside>
+        <section class="right-wrap">
+            <div class="header">
+                <span @click="toggleMode"><i class="el-icon-tickets"></i></span>
+            </div>
+            <el-switch v-model="value3" active-text="按月付费" inactive-text="按年付费">
+            </el-switch>
+            <el-switch style="display: block" v-model="value4" active-color="#13ce66" inactive-color="#ff4949"
+                active-text="按月付费" inactive-text="按年付费">
+            </el-switch>
+            <router-view></router-view>
+        </section>
     </div>
 
     <script>

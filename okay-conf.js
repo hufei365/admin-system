@@ -5,8 +5,18 @@ fis.set('map_file', '/src/resource-map.js');
 
 fis.hook(require('fis3-hook-npm'));
 
-
-fis.match('/**\.{css,scss}', {
+fis.match('/src/**\.js', {
+    isMod:true,
+    parser: fis.plugin('babel-7.x', {
+        sourceMap: false
+    })
+})
+.match('/src/**\.min\.{js, css}',{
+    // useCompile:false,
+    useSprite:false,
+    parser:null
+})
+.match('/**\.{css,scss}', {
     // 图片合并
     useSprite: true
 });
@@ -36,8 +46,8 @@ fis.match('/src/**.vue', {
             cssScopedFlag: '__vuec__',
 			isPartial:false,
         })
-		,fis.plugin('babel-7', {
-            sourceMap: 'both'
+		,fis.plugin('babel-7.x', {
+            sourceMap: false
         }) // 处理ES6
     ]
 });
